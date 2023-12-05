@@ -69,7 +69,7 @@ body {
 
 .sphere {
   background: radial-gradient(
-    circle at 30% 30%,
+    circle at top,
     #ffffff,
     #c4aadf,
     #5f49a0,
