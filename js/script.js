@@ -3,6 +3,9 @@ const toggleDarkLight = document.getElementById("toggleDarkLight");
 const currentTheme = localStorage.getItem("theme");
 const loadingPercentage = document.getElementById("loadingPercentage");
 const loadingContainer = document.querySelector(".loading-container");
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+const links = document.querySelectorAll(".nav-links li");
 
 if (currentTheme) {
   body.classList.add(currentTheme);
@@ -20,6 +23,14 @@ if (currentTheme) {
 function toggleLoadingVisibility() {
   document.querySelector(".loading-container p").style.opacity = 0;
   loadingContainer.classList.toggle("hide");
+}
+
+function showLoadingWithTime() {
+  toggleLoadingVisibility();
+  toggleResponsiveNavLinks();
+  setTimeout(() => {
+    toggleLoadingVisibility();
+  }, 1000);
 }
 
 function changeThemeWithLoading() {
@@ -44,6 +55,22 @@ function changeThemeWithLoading() {
 toggleDarkLight.onclick = function () {
   changeThemeWithLoading();
 };
+
+// -------------------------------------------------------------------------------------------------------- //
+
+function toggleResponsiveNavLinks() {
+  navLinks.classList.toggle("open");
+  links.forEach((link) => {
+    link.classList.toggle("fade");
+  });
+
+  hamburger.classList.toggle("toggle");
+}
+
+hamburger.addEventListener("click", () => {
+  toggleResponsiveNavLinks();
+});
+
 // -------------------------------------------------------------------------------------------------------- //
 
 function updateProgress(resourcesLoaded, totalResources) {
@@ -98,12 +125,6 @@ document.addEventListener("DOMContentLoaded", () => {
     state();
   }, 1000);
 });
-
-// window.onload = () => {
-//   setTimeout(() => {
-//     state();
-//   }, 1000);
-// };
 
 // alert(
 //   "This website is currently under development. Thank you for your patience."
