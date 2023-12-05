@@ -126,6 +126,4 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 1000);
 });
 
-// alert(
-//   "This website is currently under development. Thank you for your patience."
-// );
+alert("This website is currently under development. Thank you for your patience." );
