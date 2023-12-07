@@ -8,11 +8,11 @@
 
 ::-webkit-scrollbar-track {
   /* background: transparent; */
-  background: var(--shrond-color-1);
+  background: var(--shrond-color-2);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--shrond-color-1); /* Color of the thumb */
+  background-color: var(--shrond-color-3); /* Color of the thumb */
   border-radius: 3px; /* Rounded corners for the thumb */
 }
 
