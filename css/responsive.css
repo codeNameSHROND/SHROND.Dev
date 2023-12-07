@@ -9,7 +9,11 @@
   display: none;
 }
 
-@media screen and (max-width: 800px) {
+@media (max-width: 1000px) {
+  span#toggleDarkLight {
+    margin-right: 70px;
+  }
+
   .hamburger {
     display: block;
     position: absolute;
@@ -85,4 +89,32 @@
 }
 .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media (max-width: 630px) {
+  .logo,
+  .logo i {
+    font-size: 20px;
+    color: var(--shrond-color-4);
+    font-weight: 700;
+  }
+
+  .welcome h1:nth-child(1),
+  .welcome h1 span {
+    font-size: 20px;
+  }
+
+  .welcome h1:nth-child(1),
+  .welcome h1:nth-child(2),
+  .welcome h1:nth-child(3) {
+    margin-bottom: 0;
+  }
+
+  .welcome .logo {
+    font-size: 60px;
+  }
+
+  .welcome .social-icons {
+    margin-top: 0px;
+  }
 }

@@ -14,7 +14,7 @@ nav {
 
 nav .logo {
   margin-left: 4vw;
-  width: 220px;
+  width: 290px;
 }
 
 nav ul {
@@ -94,7 +94,7 @@ main.main.show {
 .welcome h1:nth-child(1),
 .welcome h1:nth-child(2),
 .welcome h1:nth-child(3) {
-  margin-bottom: -5vh;
+  margin-bottom: -20px;
 }
 
 .welcome h1:nth-child(1) {
@@ -156,7 +156,8 @@ input[type="email"] {
   box-shadow: var(--box-shadow);
 }
 
-input[type="email"]:focus {
+input[type="email"]:focus,
+input[type="email"]:hover {
   outline: none;
   border-color: var(--shrond-color-4);
   width: 100%;
@@ -164,7 +165,6 @@ input[type="email"]:focus {
 
 ::placeholder {
   color: var(--shrond-color-4);
-  opacity: 0.5;
 }
 
 .welcome .contact-me i.fa-envelope-circle-check {
@@ -195,9 +195,12 @@ input[type="email"]:focus {
 
 .welcome .contact-me i.fa-paper-plane:hover,
 .social-icons .btns i:hover {
-  color: var(--shrond-color-4);
   border-color: var(--shrond-color-4);
   font-size: 40px;
+}
+
+.welcome .contact-me i.fa-paper-plane:hover {
+  color: var(--shrond-color-4);
 }
 
 .embed {

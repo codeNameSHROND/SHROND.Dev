@@ -11,13 +11,12 @@
   /* --shrond-color-1: #050925; */
   --shrond-color-1: radial-gradient(
     circle at left,
-    #04040b 0%,
-    #080813 30%,
-    #04040b 50%,
-    #080813 70%,
-    #0c0c19 100%
+    #04061a 0%,
+    #080c28 25%,
+    #0a0f31 50%,
+    #080c28 75%,
+    #04061a 100%
   );
-
   --shrond-color-2: #1d267d;
   --shrond-color-3: #5c469c;
   --shrond-color-4: #cabef8;
@@ -146,7 +145,7 @@ body {
 
 .logo,
 .logo i {
-  font-size: 30px;
+  font-size: 40px;
   color: var(--shrond-color-4);
   font-weight: 700;
 }
@@ -156,6 +155,25 @@ body {
 }
 
 .text-with-stroke {
+  -webkit-text-stroke: 1px white;
+  text-stroke: 1px white;
+}
+
+.fa-facebook:hover {
+  color: #1877f2;
+}
+
+.fa-youtube:hover {
+  color: red;
+}
+
+.fa-x-twitter:hover {
+  color: black;
+}
+
+.fa-facebook:hover,
+.fa-youtube:hover,
+.fa-x-twitter:hover {
   -webkit-text-stroke: 1px white;
   text-stroke: 1px white;
 }
