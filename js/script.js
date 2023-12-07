@@ -138,5 +138,5 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 alert(
-  "This website is currently under development. Thank you for your patience. \n\n  - SHROND.Dev"
+  "This website is currently under development. \nThank you for your patience. \n\n  - SHROND.Dev"
 );

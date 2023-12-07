@@ -8,20 +8,36 @@
 }
 
 :root {
-  --shrond-color-1: #050925;
+  /* --shrond-color-1: #050925; */
+  --shrond-color-1: radial-gradient(
+    circle at left,
+    #04040b 0%,
+    #080813 30%,
+    #04040b 50%,
+    #080813 70%,
+    #0c0c19 100%
+  );
+
   --shrond-color-2: #1d267d;
   --shrond-color-3: #5c469c;
   --shrond-color-4: #cabef8;
   --shrond-color-5: #ffffff;
   --text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.2),
     2px 2px 2px rgba(255, 255, 255, 0.1);
-  --box-shadow: 4px 4px 8px rgba(157, 137, 214, 0.404);
+  --box-shadow: 1px 1px 4px rgba(157, 137, 214, 0.404);
 
   --transition: 0.3s ease;
 }
 
 .light-mode {
-  --shrond-color-1: #ffffff;
+  --shrond-color-1: radial-gradient(
+    circle at left,
+    #927fcc 0%,
+    #d6d1ff 25%,
+    #b7a3ff 50%,
+    #e5dcff 75%,
+    #ffffff 100%
+  );
   --shrond-color-2: #ccd1ed;
   --shrond-color-3: #4f4070;
   --shrond-color-4: #4b2380;
@@ -137,4 +153,9 @@ body {
 
 .text-with-shadow {
   text-shadow: var(--text-shadow);
+}
+
+.text-with-stroke {
+  -webkit-text-stroke: 1px white;
+  text-stroke: 1px white;
 }
