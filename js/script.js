@@ -3,6 +3,8 @@ const toggleDarkLight = document.getElementById("toggleDarkLight");
 const currentTheme = localStorage.getItem("theme");
 const loadingPercentage = document.getElementById("loadingPercentage");
 const loadingContainer = document.querySelector(".loading-container");
+const main = document.querySelector(".main");
+const embed = document.querySelectorAll(".embed");
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 const links = document.querySelectorAll(".nav-links li");
@@ -21,6 +23,7 @@ if (currentTheme) {
 }
 
 function toggleLoadingVisibility() {
+  main.classList.toggle("show");
   document.querySelector(".loading-container p").style.opacity = 0;
   loadingContainer.classList.toggle("hide");
 }
@@ -56,7 +59,11 @@ toggleDarkLight.onclick = function () {
   changeThemeWithLoading();
 };
 
-// -------------------------------------------------------------------------------------------------------- //
+function showEmbed() {
+  embed.forEach((i) => {
+    i.classList.toggle("show");
+  });
+}
 
 function toggleResponsiveNavLinks() {
   navLinks.classList.toggle("open");
@@ -71,8 +78,6 @@ hamburger.addEventListener("click", () => {
   toggleResponsiveNavLinks();
 });
 
-// -------------------------------------------------------------------------------------------------------- //
-
 function updateProgress(resourcesLoaded, totalResources) {
   const progress = (resourcesLoaded / totalResources) * 100;
   const formattedProgress = progress.toFixed(0).padStart(3, "0"); // Format the progress
@@ -86,15 +91,19 @@ function state() {
     const initiatorType = entry.initiatorType;
     const resourceName = entry.name;
 
+    console.log(`(initiatorType:${initiatorType}) (name: ${resourceName})`);
+
     if (
-      initiatorType === "navigation" ||
-      initiatorType === "script" ||
-      initiatorType === "link" ||
-      initiatorType === "img" ||
-      initiatorType === "css" ||
-      initiatorType === "font" ||
-      initiatorType === "fetch" ||
-      (initiatorType === "other" && resourceName.includes(".php"))
+      initiatorType == "navigation" ||
+      initiatorType == "script" ||
+      initiatorType == "link" ||
+      initiatorType == "img" ||
+      initiatorType == "css" ||
+      initiatorType == "font" ||
+      initiatorType == "fetch" ||
+      initiatorType == "iframe" ||
+      initiatorType == "other" ||
+      resourceName.includes(".php")
     ) {
       resources.push(resourceName);
     }
@@ -117,6 +126,8 @@ function state() {
   });
   setTimeout(() => {
     loadingContainer.classList.add("hide");
+    main.classList.toggle("show");
+    showEmbed();
   }, 1000);
 }
 
@@ -127,5 +138,5 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 alert(
-  "This website is currently under development. Thank you for your patience. \n\n - SHROND.Dev"
+  "This website is currently under development. Thank you for your patience. \n\n  - SHROND.Dev"
 );

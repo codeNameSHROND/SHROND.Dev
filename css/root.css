@@ -8,11 +8,13 @@
 }
 
 :root {
-  --shrond-color-1: #060b31;
+  --shrond-color-1: #050925;
   --shrond-color-2: #1d267d;
   --shrond-color-3: #5c469c;
-  --shrond-color-4: #d4adfc;
+  --shrond-color-4: #cabef8;
   --shrond-color-5: #ffffff;
+  --text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.2),
+    2px 2px 2px rgba(255, 255, 255, 0.1);
   --box-shadow: 4px 4px 8px rgba(157, 137, 214, 0.404);
 
   --transition: 0.3s ease;
@@ -24,6 +26,7 @@
   --shrond-color-3: #4f4070;
   --shrond-color-4: #4b2380;
   --shrond-color-5: #0f143a;
+  --text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 2px 2px 2px rgba(0, 0, 0, 0.1);
   --box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.37);
 }
 
@@ -35,13 +38,15 @@ html {
 body {
   background: var(--shrond-color-1);
   font-family: "Poppins", sans-serif;
+  min-width: 100vw;
   min-height: 100vh;
-  overflow-y: scroll;
   overflow-x: hidden;
+  overflow-y: scroll;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 80px;
+  user-select: none;
 }
 
 .loading-container,
@@ -56,8 +61,10 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: calc(100vh + 100px);
-  width: 100vw;
+  min-height: calc(100vh + 100px);
+  min-width: 100vw;
+  width: 100%;
+  height: 100%;
   z-index: 889;
   background: #060b31;
   flex-direction: column;
@@ -129,6 +136,5 @@ body {
 }
 
 .text-with-shadow {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6), 2px 2px 4px rgba(0, 0, 0, 0.4),
-    3px 3px 6px rgba(0, 0, 0, 0.2);
+  text-shadow: var(--text-shadow);
 }
