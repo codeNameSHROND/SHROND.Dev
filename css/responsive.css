@@ -115,6 +115,19 @@
   }
 
   .welcome .social-icons {
-    margin-top: 0px;
+    margin-top: 5px;
+    padding-top: 10px;
+    flex-direction: column-reverse;
+  }
+
+  .welcome .social-icons .btns {
+    margin-top: 5px;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .welcome .contact-me {
+    justify-content: center;
+    width: 100%;
   }
 }
