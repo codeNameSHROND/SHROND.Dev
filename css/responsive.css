@@ -111,10 +111,11 @@
   }
 
   .welcome .logo {
-    font-size: 60px;
+    font-size: 100px;
   }
 
   .welcome .social-icons {
+    border: none;
     margin-top: 5px;
     padding-top: 10px;
     flex-direction: column-reverse;
