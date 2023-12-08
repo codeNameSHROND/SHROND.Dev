@@ -91,7 +91,7 @@ function state() {
     const initiatorType = entry.initiatorType;
     const resourceName = entry.name;
 
-    console.log(`(initiatorType:${initiatorType}) (name: ${resourceName})`);
+    // console.log(`(initiatorType:${initiatorType}) (name: ${resourceName})`);
 
     if (
       initiatorType == "navigation" ||
@@ -138,5 +138,5 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 alert(
-  "This website is currently under development. \nThank you for your patience. \n\n   - SHROND.Dev"
+  "This website is currently under development. \nThank you for your patience. \n\n    - SHROND.Dev"
 );
