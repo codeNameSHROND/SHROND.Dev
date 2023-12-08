@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"); */
 
 * {
   margin: 0;
@@ -19,11 +19,11 @@
   );
   --shrond-color-2: #1d267d;
   --shrond-color-3: #5c469c;
-  --shrond-color-4: #cabef8;
-  --shrond-color-5: #ffffff;
-  --text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.2),
-    2px 2px 2px rgba(255, 255, 255, 0.1);
-  --box-shadow: 1px 1px 4px rgba(157, 137, 214, 0.404);
+  --shrond-color-4: #e4ddff;
+  --shrond-color-5: rgb(123, 229, 255);
+  --text-shadow: 1px 1px 1px rgb(123, 229, 255, 0.2),
+    2px 2px 2px rgb(123, 229, 255, 0.3);
+  --box-shadow: 2px 2px 8px rgb(123, 229, 255, 0.2);
 
   --transition: 0.3s ease;
 }
@@ -31,10 +31,10 @@
 .light-mode {
   --shrond-color-1: radial-gradient(
     circle at left,
-    #927fcc 0%,
-    #d6d1ff 25%,
-    #b7a3ff 50%,
-    #e5dcff 75%,
+    #c1bae7 0%,
+    rgb(191, 195, 245) 25%,
+    #b8bcf3 50%,
+    #c0c8f7 75%,
     #ffffff 100%
   );
   --shrond-color-2: #ccd1ed;
@@ -84,7 +84,7 @@ body {
   background: #060b31;
   flex-direction: column;
   opacity: 1;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease;
 }
 
 .loading-container.hide {
@@ -137,17 +137,16 @@ body {
 }
 
 .logo {
-  letter-spacing: 1px;
   position: relative;
   z-index: 1;
   overflow: hidden;
+  font-weight: bold;
 }
 
 .logo,
 .logo i {
-  font-size: 40px;
+  font-size: 30px;
   color: var(--shrond-color-4);
-  font-weight: 700;
 }
 
 .text-with-shadow {
@@ -159,21 +158,34 @@ body {
   text-stroke: 1px white;
 }
 
-.fa-facebook:hover {
-  color: #1877f2;
-}
-
-.fa-youtube:hover {
-  color: red;
-}
-
-.fa-x-twitter:hover {
-  color: black;
+.fa-facebook,
+.fa-youtube,
+.fa-x-twitter {
+  -webkit-text-stroke: 1px var(--shrond-color-5);
+  text-stroke: 1px var(--shrond-color-5);
 }
 
 .fa-facebook:hover,
 .fa-youtube:hover,
 .fa-x-twitter:hover {
-  -webkit-text-stroke: 1px white;
-  text-stroke: 1px white;
+  -webkit-text-stroke: 2px white;
+  text-stroke: 2px white;
+}
+
+.fa-facebook {
+  color: #1877f2;
+}
+
+.fa-youtube {
+  color: red;
+}
+
+.fa-x-twitter {
+  color: black;
+}
+
+a,
+button,
+.button {
+  cursor: pointer;
 }
